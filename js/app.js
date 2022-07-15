@@ -10,10 +10,16 @@ function PageTransitions() {
         currentBtn[0].className = currentBtn[0].className.replace('active-btn',' ');
         this.className += 'active-btn';
     }));
-}
+};
 function PageTransitions2() {
+    [...document.querySelectorAll(".control")].forEach(button => {
+        button.addEventListener("click", function() {   
+            document.querySelector(".active").classList.remove("active");
+            document.getElementById(button.dataset.id).classList.add("active");
+        })
+    });
     //Secciones activa
-    AllSections.addEventListener('click',(e) =>{
+    /*AllSections.addEventListener('click',(e) =>{
         const id = e.target.dataset.id;
         if (id) {
             //remover selecion de otros botones
@@ -29,8 +35,7 @@ function PageTransitions2() {
             const element = document.getElementById(id);
             element.classList.add('active')
         }
-    })
-}
-
+    })*/
+};
 PageTransitions();
 PageTransitions2();
