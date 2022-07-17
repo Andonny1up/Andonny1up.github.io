@@ -704,6 +704,112 @@ section {
   padding-bottom: 1rem;
 }
 
+/*Contact section*/
+.contact-content-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 3.5rem;
+}
+
+.contact-content-cont h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.contact-content-cont p {
+  margin: 1rem 0;
+  line-height: 2rem;
+}
+
+.contact-content-cont .contact-info .contact-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-content-cont .contact-info .contact-item p {
+  margin: .3rem 0;
+  padding: 0;
+}
+
+.contact-content-cont .contact-info .contact-item .icon {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr;
+      grid-template-columns: 40px 1fr;
+}
+
+.contact-content-cont .contact-info .contact-item .icon i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.3rem;
+}
+
+.contact-content-cont .contact-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.contact-content-cont .contact-icon a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--colorWhite);
+  background-color: var(--colorGrey-5);
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 .4rem;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.contact-content-cont .contact-icon a:hover {
+  background-color: var(--colorSecundary);
+}
+
+.contact-content-cont .contact-icon a:hover i {
+  color: var(--colorPrimary);
+}
+
+.contact-content-cont .contact-icon a i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.3rem;
+}
+
 /*independed components*/
 .btn-container {
   display: -webkit-box;

@@ -497,6 +497,74 @@ section{
         }
     }
 }
+/*Contact section*/
+.contact-content-cont{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3.5rem;
+    //flex: 2;
+    h4{
+        margin-top: 1rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+    }
+    p{
+        margin: 1rem 0;
+        line-height: 2rem;
+    }
+    .contact-info{
+        .contact-item{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p{
+                margin: .3rem 0;
+                padding: 0;
+            };
+            .icon{
+                display: grid;
+                grid-template-columns: 40px 1fr;
+                i{
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    .contact-icon{
+        display: flex;
+        margin-top: 2rem;
+        a{
+            display: flex;
+            align-items: center;
+            color: var(--colorWhite);
+            background-color: var(--colorGrey-5);
+            cursor: pointer;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 0 .4rem;
+            transition: all .4s ease-in-out;
+            &:hover{
+                background-color: var(--colorSecundary);
+                i{
+                    color: var(--colorPrimary);
+                }
+            }
+            i{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+
+
 
 /*independed components*/
 .btn-container{
