@@ -1,5 +1,21 @@
 :root {
-  --colorPrimary: #434343;
+  --colorPrimary: #FBFBFB;
+  --colorSecundary: #ff3838ff;
+  --colorWhite: #454e56;
+  --colorBlack: #000;
+  --colorGrey0: #f8f8f8;
+  --colorGrey-1: #6c7983;
+  --colorGrey-2: #6c7983;
+  --colorGrey-3: #6c7983;
+  --colorGrey-4: #454e56;
+  --colorGrey-5: #f3f3f3;
+  --colorGrey-6: #12181b;
+  --br-sm-2: 1.4rem;
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+}
+
+.dark-mode {
+  --colorPrimary: #191d2b;
   --colorSecundary: #FFB600;
   --colorWhite: #FFFFFF;
   --colorBlack: #000;
@@ -10,8 +26,6 @@
   --colorGrey-4: #454e56;
   --colorGrey-5: #2a2e35;
   --colorGrey-6: #12181b;
-  --br-sm-2: 1.4rem;
-  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
 }
 
 * {
@@ -118,6 +132,7 @@ section {
   }
 }
 
+/*Controlls*/
 .controlls {
   position: fixed;
   z-index: 10;
@@ -173,6 +188,41 @@ section {
 
 .controlls .control i {
   font-size: 1.2rem;
+  color: var(--colorGrey-2);
+  pointer-events: none;
+}
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--colorGrey-4);
+  cursor: pointer;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.theme-btn:active {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.theme-btn i {
+  font-size: 1.4rem;
   color: var(--colorGrey-2);
   pointer-events: none;
 }
@@ -463,7 +513,7 @@ section {
 .timeline .timeline-item {
   position: relative;
   padding-left: 3rem;
-  border-left: 1px solid var(--colorGrey-5);
+  border-left: 1px solid #2a2e35;
 }
 
 .timeline .timeline-item .tl-icon {
@@ -487,6 +537,7 @@ section {
 
 .timeline .timeline-item .tl-icon i {
   font-size: 1.3rem;
+  color: white;
 }
 
 .timeline .timeline-item .tl-duration {
