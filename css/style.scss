@@ -68,18 +68,18 @@ section{
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(205, 188, 90);
+    //background-color: rgb(205, 188, 90);
 
 }
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(90, 205, 96);
+    //background-color: rgb(90, 205, 96);
 }
 .sec5{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: rgb(205, 90, 148);
+    //background-color: rgb(205, 90, 148);
 }
 .active{
     display: block;
@@ -311,6 +311,7 @@ section{
     position: relative; 
     &::before{
         content: '';
+        position: absolute;
         left: 50%;
         top: 0;
         width: 40%;
@@ -370,6 +371,82 @@ section{
         }
     } 
 }
+
+/*PortFolio*/
+.port-text{
+    padding: 2rem 0;
+    text-align: center;
+}
+.portfolios{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    .portfolio-item{
+        position: relative;
+        img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .hover-items{
+            width: 100%;
+            height: 100%;
+            background-color: var(--colorSecundary);
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0);
+            transition: all .4s ease-in-out;
+            h3{
+                font-size: 1.5rem;
+                color: var(--colorWhite);
+                margin-bottom: 1.5rem; 
+            }
+            .icons{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .icon{
+                    background-color: var(--colorPrimary);
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+                    cursor: pointer;
+                    transition: all .4s ease-in-out;
+                    i{
+                        font-size: 1.5rem;
+                        color: var(--colorWhite);
+                        margin: 0 1rem;
+                    }
+                    &:hover{
+                        background-color: var(--colorWhite);
+                        i{
+                            color: var(--colorPrimary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.portfolio-item:hover .hover-items{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
 /*independed components*/
 .btn-container{
     display: flex;
