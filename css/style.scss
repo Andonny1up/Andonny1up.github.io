@@ -1,3 +1,13 @@
+//reset bowser default
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    list-style: none;
+}
+
 :root{
     //light
     --colorPrimary: #FBFBFB;
@@ -27,13 +37,6 @@
     --colorGrey-5: #2a2e35;
     --colorGrey-6: #12181b;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    list-style: none;
-}
 html{
     //font-size: 62.5%;
 }
@@ -51,7 +54,7 @@ a{
     font-family: inherit;
 }
 header{
-    height: 100vh;;
+    min-height: 100vh;;
     color: var(--colorWhite);
     overflow: hidden;
 }
@@ -64,11 +67,13 @@ section{
     padding: 3rem 12rem;
 }
 .section{
-    transform: translateY(-100%) scale(0);
+    display: none;
+    //transform: translateY(-100%) scale(0);
+    transform: translateY(0) scale(1);
     transition: all .4 ease-in-out;
     background-color: var(--colorPrimary);
 }
-.sec1{
+/*.sec1{
     display: none;
     transform: translateY(0) scale(1);
     //background-color: rgb(205, 113, 90);
@@ -93,7 +98,7 @@ section{
     display: none;
     transform: translateY(0) scale(1);
     //background-color: rgb(205, 90, 148);
-}
+}*/
 .active{
     display: block;
     animation: scaleAnim 1s ease-in-out;
@@ -170,7 +175,7 @@ section{
 .header-content{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    height: 100%;
+    min-height: 100vh;
     .left-header{
         display: flex;
         align-items: center;
@@ -209,7 +214,7 @@ section{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 18rem;
+        padding-right: 9rem;
         .name{
             font-size: 3rem;
             span{
@@ -670,3 +675,5 @@ section{
         }
     }
 }
+
+@import './media';
